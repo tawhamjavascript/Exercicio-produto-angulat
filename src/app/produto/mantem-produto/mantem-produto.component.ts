@@ -15,7 +15,7 @@ export class MantemProdutoComponent {
   nameButtonSuport = 'Cadastrar';
   products = PRODUTOS
   constructor(private currentRoute: ActivatedRoute, private router: Router) {
-    this.productSuport = new Produto("mustang", 20.000, "car very beautifull", )
+    this.productSuport = new Produto()
     const idForEdition = this.currentRoute.snapshot.paramMap.get('id');
     if (idForEdition) {
       const foundedProduct = this.products.find(product => product.id === Number(idForEdition));
